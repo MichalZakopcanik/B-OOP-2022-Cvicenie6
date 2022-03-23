@@ -13,9 +13,7 @@ public class Main {
         okno.setSize(300, 300);
         okno.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        JButton button = new JButton("Klikni");
-        button.addActionListener(new MyPanel());
-        okno.add(button);
+        okno.add(new MyPanel());
     }
 }
 
