@@ -13,7 +13,7 @@ public class Main {
         okno.setSize(300, 300);
         okno.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        okno.add(new MyCanvas());
+        okno.add(new MyPanel());
 
     }
 }
