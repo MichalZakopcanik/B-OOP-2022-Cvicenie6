@@ -4,13 +4,20 @@ import java.awt.*;
 
 public class MyCanvas extends Canvas {
 
+    private boolean imageWasDrawn;
+
     @Override
     public void paint(Graphics g) {
+        if (!imageWasDrawn) {
+            this.vlastnyPaint(g);
+            imageWasDrawn = true;
+        }
+    }
+    private void vlastnyPaint(Graphics g){
         g.setColor(Color.GREEN);
         g.fillRect(100,100,100,100);
         g.setColor(Color.RED);
         g.fillPolygon(new int[] {100, 200, 150}, new int[] {100, 100, 80},3);
-
 
         g.setColor(Color.CYAN);
         for (int x=0; x<2; x++){
